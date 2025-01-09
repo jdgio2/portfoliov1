@@ -18,7 +18,8 @@ export default function Hero() {
         </h2>
         <button
           className="transition ease-in-out bg-slate-200 p-4 
-        rounded-md text-2xl font-mono font-normal hover:bg-slate-300 hover:slate-800 shadow-md"
+        rounded-md text-2xl font-mono font-normal hover:bg-slate-300 hover:slate-800 shadow-md
+        active:bg-slate-500"
         >
           ABOUT ME
         </button>
