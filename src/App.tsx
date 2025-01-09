@@ -11,8 +11,8 @@ export default function App() {
       <Header></Header>
       <Hero></Hero>
       <Intro></Intro>
-      <Projects></Projects>
       <Skills></Skills>
+      <Projects></Projects>
       <Contact></Contact>
       <Footer></Footer>
     </>
