@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <>
-      <div className="flex flex-col items-center mb-10">
+      <div className="flex flex-col items-center mb-10 h-full">
         <h1 className="my-10 mx-1 text-5xl font-hero text-center justify-self-center">
           howdy! i'm JD
         </h1>
