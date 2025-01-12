@@ -22,21 +22,21 @@ export default function MyDialog({ children, open, setOpen }: Props) {
         <div className="flex min-h-full justify-center items-center p-4 text-center sm:p-0">
           <DialogPanel
             transition
-            className="relative transform rounded-lg 
+            className="relative transform rounded-xl 
               bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 
               data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 
               data-[enter]:ease-out data-[leave]:ease-in sm:my-8 w-full max-w-lg 
               data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
-            <button
-              className="transition ease-in-out bg-slate-200 py-1 font-bold px-6 m-2 right-0 
+            <div className=" px-4 pb-4 pt-5 sm:p-6 sm:pb-4 rounded-xl">
+              <button
+                className="transition ease-in-out bg-slate-200 py-1 font-bold px-6 mb-3 right-0 
         rounded-sm font-mono hover:bg-slate-300 hover:slate-800 drop-shadow-sm
         active:bg-slate-500"
-              onClick={() => setOpen(false)}
-            >
-              X
-            </button>
-            <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 rounded-lg">
+                onClick={() => setOpen(false)}
+              >
+                X
+              </button>
               <div className="sm:flex sm:items-start overflow-y-auto max-h-[70vh]">
                 {children}
               </div>
