@@ -1,17 +1,43 @@
 import { useState } from "react";
 import MyDialog from "../layout/MyDialog";
 import SkillHoverableIcon from "../layout/SkillHoverableIcon";
+import { DialogTitle } from "@headlessui/react";
 export default function Skills() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="py-10 flex flex-col items-center mx-1">
+    <section className="py-10 flex flex-col items-center mx-1">
       <h1 className="inline mx-2 font-mono font-bold text-5xl text-center border-b-2 border-indigo-300 pb-4 mb-8">
         SKILLS AND TECHNOLOGIES
       </h1>
 
       <MyDialog open={open} setOpen={setOpen}>
+        <DialogTitle className="text-center font-bold text-xl mb-4">
+          Technologies
+        </DialogTitle>
         <div className="flex flex-row justify-center gap-10 flex-wrap">
+          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
           <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
           <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
           <SkillHoverableIcon icon="express"></SkillHoverableIcon>
@@ -42,6 +68,6 @@ export default function Skills() {
         </div>
         <p className="font-mono mt-6 text-xl text-slate-400">CLICK TO EXPAND</p>
       </button>
-    </div>
+    </section>
   );
 }
