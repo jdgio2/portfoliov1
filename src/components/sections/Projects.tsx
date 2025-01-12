@@ -1,4 +1,5 @@
 import MyDialog from "../layout/MyDialog";
+import Carousel from "../layout/Carousel";
 import { useState } from "react";
 
 export default function Projects() {
@@ -14,7 +15,8 @@ export default function Projects() {
 
       {/* Dialogs */}
       <MyDialog open={proj1Open} setOpen={setProj1Open}>
-        <p>Details for Project 1</p>
+        <Carousel></Carousel>
+        <p>Deets</p>
       </MyDialog>
       <MyDialog open={proj2Open} setOpen={setProj2Open}>
         <p>Details for Project 2</p>
@@ -23,7 +25,6 @@ export default function Projects() {
         <p>Details for Project 3</p>
       </MyDialog>
 
-      {/* Buttons */}
       <div className="flex flex-col items-center justify-items-center p-2 gap-12">
         <button
           className="bg-slate-100 border-indigo-100 h-60 w-60 drop-shadow-md hover:shadow-sm hover:drop-shadow-lg rounded-full"
