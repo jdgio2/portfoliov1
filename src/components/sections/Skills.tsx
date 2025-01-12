@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MyDialog from "../layout/MyDialog";
+import SkillHoverableIcon from "../layout/SkillHoverableIcon";
 export default function Skills() {
   const [open, setOpen] = useState(false);
 
@@ -9,7 +10,20 @@ export default function Skills() {
         SKILLS AND TECHNOLOGIES
       </h1>
 
-      <MyDialog open={open} setOpen={setOpen}></MyDialog>
+      <MyDialog open={open} setOpen={setOpen}>
+        <div className="flex flex-row justify-center gap-10 flex-wrap">
+          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
+          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
+        </div>
+        <p className="md:hidden font-mono mt-6 text-xl text-slate-400 text-center">
+          TAP TO SEE TITLES
+        </p>
+        <p className="hidden md:block font-mono mt-6 text-xl text-slate-400 text-center">
+          HOVER TO SEE TITLES
+        </p>
+      </MyDialog>
 
       <button
         className="bg-slate-100 border-indigo-100 py-6 px-8 mx-2 drop-shadow-lg hover:shadow-sm hover:drop-shadow-lg rounded-md"
@@ -26,7 +40,7 @@ export default function Skills() {
           <i className="text-8xl devicon-git-plain colored"></i>
           <i className="text-8xl devicon-postgresql-plain colored"></i>
         </div>
-        <p className="font-mono mt-2 text-xl text-slate-400">CLICK TO EXPAND</p>
+        <p className="font-mono mt-6 text-xl text-slate-400">CLICK TO EXPAND</p>
       </button>
     </div>
   );

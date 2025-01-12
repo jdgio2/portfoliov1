@@ -14,11 +14,11 @@ export default function MyDialog({ children, open, setOpen }: Props) {
         transition
         className="fixed inset-0 bg-gray-500/75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
       />
-      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div className="fixed inset-0 z-10 w-screen">
         <div className="flex min-h-full justify-center items-center p-4 text-center sm:p-0">
           <DialogPanel
             transition
-            className="relative transform overflow-hidden rounded-lg 
+            className="relative transform overflow-auto rounded-lg 
               bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 
               data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 
               data-[enter]:ease-out data-[leave]:ease-in sm:my-8 w-full max-w-lg 
