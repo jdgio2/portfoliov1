@@ -2,6 +2,7 @@ import { useState } from "react";
 import MyDialog from "../layout/MyDialog";
 import SkillHoverableIcon from "../layout/SkillHoverableIcon";
 import { DialogTitle } from "@headlessui/react";
+import { validIcons, IconKey } from "../../assets/validicons";
 export default function Skills() {
   const [open, setOpen] = useState(false);
 
@@ -16,32 +17,31 @@ export default function Skills() {
           Technologies
         </DialogTitle>
         <div className="flex flex-row justify-center gap-10 flex-wrap">
-          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="html5"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="css3"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="express"></SkillHoverableIcon>
-          <SkillHoverableIcon icon="postgresql"></SkillHoverableIcon>
+          {Object.keys(validIcons).map((item) => {
+            if (validIcons[item as IconKey].iconType === "full-stack") {
+              return (
+                <SkillHoverableIcon
+                  icon={item as IconKey}
+                  key={item}
+                ></SkillHoverableIcon>
+              );
+            }
+          })}
+        </div>
+        <DialogTitle className="text-center font-bold text-xl mb-4 mt-20">
+          Other Languages and Tools
+        </DialogTitle>
+        <div className="flex flex-row justify-center gap-10 flex-wrap">
+          {Object.keys(validIcons).map((item) => {
+            if (validIcons[item as IconKey].iconType === "other") {
+              return (
+                <SkillHoverableIcon
+                  icon={item as IconKey}
+                  key={item}
+                ></SkillHoverableIcon>
+              );
+            }
+          })}
         </div>
         <p className="md:hidden font-mono mt-6 text-xl text-slate-400 text-center">
           TAP TO SEE TITLES
@@ -63,7 +63,7 @@ export default function Skills() {
           <i className="text-8xl devicon-react-plain colored"></i>
           <i className="text-8xl devicon-nodejs-plain-wordmark colored"></i>
           <i className="text-8xl devicon-express-original colored"></i>
-          <i className="text-8xl devicon-git-plain colored"></i>
+          <i className="text-8xl devicon-azure-plain colored"></i>
           <i className="text-8xl devicon-postgresql-plain colored"></i>
         </div>
         <p className="font-mono mt-6 text-xl text-slate-400">CLICK TO EXPAND</p>

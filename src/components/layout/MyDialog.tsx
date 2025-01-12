@@ -22,7 +22,7 @@ export default function MyDialog({ children, open, setOpen }: Props) {
         <div className="flex min-h-full justify-center items-center p-4 text-center sm:p-0">
           <DialogPanel
             transition
-            className="relative transform overflow-auto rounded-lg 
+            className="relative transform rounded-lg 
               bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 
               data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 
               data-[enter]:ease-out data-[leave]:ease-in sm:my-8 w-full max-w-lg 
@@ -36,8 +36,10 @@ export default function MyDialog({ children, open, setOpen }: Props) {
             >
               X
             </button>
-            <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-              <div className="sm:flex sm:items-start">{children}</div>
+            <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 rounded-lg">
+              <div className="sm:flex sm:items-start overflow-y-auto max-h-[70vh]">
+                {children}
+              </div>
             </div>
           </DialogPanel>
         </div>
