@@ -13,7 +13,6 @@ export default function Projects() {
         PROJECTS
       </h1>
 
-      {/* Dialogs */}
       <MyDialog open={proj1Open} setOpen={setProj1Open}>
         <Carousel></Carousel>
         <p>Deets</p>
