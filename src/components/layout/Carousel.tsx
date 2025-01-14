@@ -1,10 +1,11 @@
 import tester from "../../assets/projects/testerimage.jpg";
 import tester2 from "../../assets/projects/tester2.png";
 import tester3 from "../../assets/projects/tester3.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Carousel() {
   const images = [tester, tester2, tester3];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   function handleNext() {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -16,7 +17,17 @@ export default function Carousel() {
     );
   }
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const timedUpdate = setTimeout(
+      () => setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length),
+      5000
+    );
+
+    return () => {
+      clearInterval(timedUpdate);
+    };
+  }, [images.length, currentIndex]);
+
   return (
     <div className="relative w-full h-42 bg-orange-700">
       <div className="flex flex-row overflow-hidden bg-indigo-400">
