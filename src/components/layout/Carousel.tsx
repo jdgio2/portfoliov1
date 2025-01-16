@@ -1,10 +1,11 @@
-import tester from "../../assets/projects/testerimage.jpg";
-import tester2 from "../../assets/projects/tester2.png";
-import tester3 from "../../assets/projects/tester3.jpg";
+// NOTE: You can only use up to 10 images in this carousel. See safelist in tailwind.config for info
 import { useEffect, useState } from "react";
 
-export default function Carousel() {
-  const images = [tester, tester2, tester3];
+interface Props {
+  images: Array<string>;
+}
+
+export default function Carousel({ images }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoScroll, setAutoScroll] = useState(1);
 
@@ -27,7 +28,7 @@ export default function Carousel() {
       );
 
       return () => {
-        clearInterval(timedUpdate);
+        clearTimeout(timedUpdate);
       };
     }
   }, [images.length, currentIndex, autoScroll]);
@@ -41,8 +42,9 @@ export default function Carousel() {
       <div className="flex flex-row overflow-hidden bg-indigo-400">
         {images.map((item) => (
           <img
+            key={item}
             className={`duration-300 transition-transform ease-in-out object-cover w-full h-full -translate-x-[${
-              currentIndex * 100
+              100 * currentIndex
             }%]`}
             src={item}
             alt=""

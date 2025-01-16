@@ -1,6 +1,9 @@
 import MyDialog from "../layout/MyDialog";
 import Carousel from "../layout/Carousel";
 import { useState } from "react";
+import tester from "../../assets/projects/testerimage.jpg";
+import tester2 from "../../assets/projects/tester2.png";
+import tester3 from "../../assets/projects/tester3.jpg";
 
 export default function Projects() {
   const [proj1Open, setProj1Open] = useState(false);
@@ -14,7 +17,7 @@ export default function Projects() {
       </h1>
 
       <MyDialog open={proj1Open} setOpen={setProj1Open}>
-        <Carousel></Carousel>
+        <Carousel images={[tester, tester2, tester3]}></Carousel>
         <p>Deets</p>
       </MyDialog>
       <MyDialog open={proj2Open} setOpen={setProj2Open}>
