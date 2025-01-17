@@ -8,7 +8,7 @@ export default function Skills() {
 
   return (
     <section className="py-10 flex flex-col items-center mx-1">
-      <h1 className="inline mx-2 font-mono font-bold text-5xl text-center border-b-2 border-indigo-300 pb-4 mb-8">
+      <h1 className="inline mx-2 font-mono font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
         SKILLS AND TECHNOLOGIES
       </h1>
 
@@ -52,7 +52,7 @@ export default function Skills() {
       </MyDialog>
 
       <button
-        className="bg-slate-100 border-indigo-100 py-6 px-8 mx-2 drop-shadow-md hover:shadow-sm hover:drop-shadow-lg rounded-md"
+        className="bg-slate-100 border-onahau-100 py-6 px-8 mx-2 drop-shadow-md hover:shadow-sm hover:drop-shadow-lg rounded-md"
         onClick={() => setOpen(true)}
       >
         <div className="flex flex-row justify-center gap-10 flex-wrap">

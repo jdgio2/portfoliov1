@@ -13,7 +13,7 @@ export default function SkillHoverableIcon({ icon }: Props) {
         aria-label={iconClassName}
       ></i>
       <p
-        className="hidden bg-slate-800 text-indigo-50 top-0 
+        className="hidden bg-slate-800 text-onahau-50 top-0 
       -translate-y-10 left-1/2 -translate-x-1/2 absolute peer-hover:inline-block
       p-1 rounded-md"
       >
