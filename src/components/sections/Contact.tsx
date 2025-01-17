@@ -85,6 +85,12 @@ export default function Contact() {
             />
           </div>
         </div>
+        <button
+          type="submit"
+          className="bg-onahau-300 rounded-md backdrop-blur-3xl p-2"
+        >
+          Submit
+        </button>
       </form>
     </section>
   );
