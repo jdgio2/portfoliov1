@@ -63,7 +63,7 @@ export default function Skills() {
           <i className="text-8xl devicon-react-plain colored"></i>
           <i className="text-8xl devicon-nodejs-plain-wordmark colored"></i>
           <i className="text-8xl devicon-express-original colored"></i>
-          <i className="text-8xl devicon-azure-plain colored"></i>
+          <i className="text-8xl devicon-tailwindcss-plain colored"></i>
           <i className="text-8xl devicon-postgresql-plain colored"></i>
         </div>
         <p className="font-mono mt-6 text-xl text-slate-400">CLICK TO EXPAND</p>

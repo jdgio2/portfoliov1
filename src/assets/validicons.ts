@@ -24,6 +24,11 @@ export const validIcons = {
     className: "devicon-react-plain colored",
     iconType: "full-stack",
   },
+  tailwind: {
+    name: "Tailwind",
+    className: "devicon-tailwindcss-original colored",
+    iconType: "full-stack",
+  },
   nodejs: {
     name: "Node.js",
     className: "devicon-nodejs-plain-wordmark colored",
