@@ -7,7 +7,6 @@ export default function Contact() {
 
     // Read the form data
     const form = e.currentTarget;
-    console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
     emailjs
       .sendForm("portfolio_contact", "portfolio_contact_form", form, {
