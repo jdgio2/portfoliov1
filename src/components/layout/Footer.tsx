@@ -26,7 +26,7 @@ export default function Footer() {
           aria-label="My GitHub"
           rel="noopener"
           target="_blank"
-          href="https://www.linkedin.com/in/jonathan-giovannetti/"
+          href="https://github.com/jdgio2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
