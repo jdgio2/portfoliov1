@@ -4,7 +4,7 @@ export default function Footer() {
       id="footer"
       className="flex flex-col justify-center items-center my-5"
     >
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row gap-10">
         <a
           aria-label="My LinkedIn"
           rel="noopener"
