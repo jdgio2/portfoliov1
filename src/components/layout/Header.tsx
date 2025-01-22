@@ -1,10 +1,7 @@
 export default function Header() {
   return (
-    <section
-      id="header"
-      className="p-1 shadow-sm backdrop-blur-lg bg-white/10 sticky top-0 left-0 right-0 z-50"
-    >
-      <nav className="justify-center space-x-36 flex flex-row mx-3 items-center">
+    <section id="header" className="p-1 sticky top-0 left-0 right-0 z-50">
+      <nav className="navbar bg-base-100">
         <a
           href="#"
           className="hidden md:block text-lg font-semibold"

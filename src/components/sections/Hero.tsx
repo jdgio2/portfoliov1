@@ -1,9 +1,7 @@
 export default function Hero() {
   return (
     <section id="hero" className="flex flex-col items-center mb-10 h-full">
-      <h1 className="my-10 mx-1 text-5xl font-hero text-center justify-self-center">
-        howdy! i'm JD
-      </h1>
+      <h1 className="">howdy! i'm JD</h1>
       <div className="p-[3px] bg-gradient-to-br  from-onahau-300 rounded-lg">
         <img
           src="/src/assets/heropic.jpg"
@@ -15,13 +13,7 @@ export default function Hero() {
         A software developer with a love for delivering value in all that I
         create.
       </h2>
-      <button
-        className="transition ease-in-out bg-slate-200 p-4 
-        rounded-md text-2xl font-mono font-normal hover:bg-slate-300 hover:slate-800 shadow-md
-        active:bg-slate-500"
-      >
-        ABOUT ME
-      </button>
+      <button className="btn">ABOUT ME</button>
     </section>
   );
 }
