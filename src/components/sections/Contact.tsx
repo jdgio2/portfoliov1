@@ -52,15 +52,13 @@ export default function Contact() {
       );
   }
   return (
-    <section id="contact" className="py-10 flex flex-col items-center mx-1">
+    <section
+      id="contact"
+      className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
+    >
       <h1 className="inline mx-2 font-mono font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
         CONTACT ME
       </h1>
-      <p className="mt-1 mx-2 text-sm text-gray-600 text-center">
-        If you would like to contact me, I'd love to talk. Just fill out the
-        info below to send me a message, and you'll get a confirmation email
-        when you're all done.
-      </p>
       <form
         onSubmit={sendEmail}
         className="mt-10 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6"

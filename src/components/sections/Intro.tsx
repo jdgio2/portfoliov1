@@ -1,7 +1,10 @@
 import HorizontalRule from "../layout/HorizontalRule";
 export default function Intro() {
   return (
-    <section id="intro" className="py-10 flex flex-col items-center mx-1">
+    <section
+      id="intro"
+      className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
+    >
       <h1 className="text-center mx-2 inline font-mono font-bold text-5xl border-b-2 border-onahau-300 pb-4 mb-8">
         WHO AM I?
       </h1>

@@ -7,7 +7,10 @@ export default function Skills() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section id="skills" className="py-10 flex flex-col items-center mx-1">
+    <section
+      id="skills"
+      className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
+    >
       <h1 className="inline mx-2 font-mono font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
         SKILLS AND TECHNOLOGIES
       </h1>
@@ -28,7 +31,7 @@ export default function Skills() {
             }
           })}
         </div>
-        <DialogTitle className="text-center font-bold text-xl mb-4 mt-20">
+        <DialogTitle className="text-center font-bold text-xl mb-4 mt-20 ">
           Other Languages and Tools
         </DialogTitle>
         <div className="flex flex-row justify-center gap-10 flex-wrap">
