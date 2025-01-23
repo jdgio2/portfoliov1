@@ -1,17 +1,16 @@
 export default function Header() {
   return (
-    <section id="header" className="p-1 sticky top-0 left-0 right-0 z-50">
-      <nav className="navbar bg-base-100">
-        <a
-          href="#"
-          className="hidden md:block text-lg font-semibold"
-          aria-label="Logo"
-        >
+    <section id="header" className="p-1 sticky top-3 z-50">
+      <nav
+        className="navbar rounded-full flex justify-self-center justify-center px-9 w-32 
+      backdrop-blur-md bg-base-300/40 bg-gradient-to-t from-base-100/10 to-base-300/100"
+      >
+        <a href="#" className="justify-self-center" aria-label="JD's Logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 225 225"
             fill="none"
-            className="w-16 h-16"
+            className="w-12 h-12"
           >
             <path
               d="M225 112.5C225 174.632 174.632 225 112.5 225C50.368 225 0 174.632 0 112.5C0 50.368 50.368 0 112.5 0C174.632 0 225 50.368 225 112.5Z"
