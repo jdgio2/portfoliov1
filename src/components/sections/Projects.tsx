@@ -32,19 +32,19 @@ export default function Projects() {
 
       <div className="flex flex-col items-center justify-items-center p-2 gap-12">
         <button
-          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-sm hover:drop-shadow-lg rounded-full"
+          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
           onClick={() => setProj1Open(true)}
         >
           Project 1
         </button>
         <button
-          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-sm hover:drop-shadow-lg rounded-full"
+          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
           onClick={() => setProj2Open(true)}
         >
           Project 2
         </button>
         <button
-          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-sm hover:drop-shadow-lg rounded-full"
+          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
           onClick={() => setProj3Open(true)}
         >
           Project 3

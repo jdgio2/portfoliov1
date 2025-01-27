@@ -4,7 +4,7 @@ export default function Hero() {
       <h1 className="my-10 mx-1 text-5xl font-hero text-center justify-self-center">
         howdy! i'm JD
       </h1>
-      <div className="p-[3px] bg-gradient-to-br  from-onahau-300 rounded-lg">
+      <div className="p-[3px] bg-linear-to-br  from-onahau-300 rounded-lg">
         <img
           src="/src/assets/heropic.jpg"
           alt="JD Giovannetti"
