@@ -8,6 +8,13 @@ export default function Intro() {
       <h1 className="text-center mx-2 inline font-mono font-bold text-5xl border-b-2 border-onahau-300 pb-4 mb-8">
         WHO AM I?
       </h1>
+      <div className="p-[3px] bg-linear-to-br  from-onahau-300 rounded-lg">
+        <img
+          src="/src/assets/heropic.jpg"
+          alt="JD Giovannetti"
+          className="max-h-60 shadow-md rounded-lg"
+        ></img>
+      </div>
       <p className="text-md mx-5 text-center">
         I'm a software developer with a B.S. in Computer Science and a minor in
         Business Analytics from Biola University. I love to solve problems that
