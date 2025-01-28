@@ -31,7 +31,7 @@ export default function MyDialog({ children, open, setOpen }: Props) {
             <div className=" px-4 pb-4 pt-5 sm:p-6 sm:pb-4 rounded-xl">
               <button
                 className="transition ease-in-out bg-slate-200 py-1 font-bold px-6 mb-3 right-0 
-        rounded-sm font-mono hover:bg-slate-300 hover:slate-800 drop-shadow-xs
+        rounded-sm font-black hover:bg-slate-300 hover:slate-800 drop-shadow-xs
         active:bg-slate-500"
                 onClick={() => setOpen(false)}
               >

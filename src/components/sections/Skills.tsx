@@ -11,7 +11,7 @@ export default function Skills() {
       id="skills"
       className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
     >
-      <h1 className="inline mx-2 font-mono font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
+      <h1 className="inline mx-2 font-black font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
         SKILLS AND TECHNOLOGIES
       </h1>
 
@@ -46,10 +46,10 @@ export default function Skills() {
             }
           })}
         </div>
-        <p className="md:hidden font-mono mt-6 text-xl text-slate-400 text-center">
+        <p className="md:hidden font-black mt-6 text-xl text-slate-400 text-center">
           TAP TO SEE TITLES
         </p>
-        <p className="hidden md:block font-mono mt-6 text-xl text-slate-400 text-center">
+        <p className="hidden md:block font-black mt-6 text-xl text-slate-400 text-center">
           HOVER TO SEE TITLES
         </p>
       </MyDialog>
@@ -69,7 +69,9 @@ export default function Skills() {
           <i className="text-8xl devicon-tailwindcss-plain colored"></i>
           <i className="text-8xl devicon-postgresql-plain colored"></i>
         </div>
-        <p className="font-mono mt-6 text-xl text-slate-400">CLICK TO EXPAND</p>
+        <p className="font-black mt-6 text-xl text-slate-400">
+          CLICK TO EXPAND
+        </p>
       </button>
     </section>
   );

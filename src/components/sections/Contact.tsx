@@ -56,7 +56,7 @@ export default function Contact() {
       id="contact"
       className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
     >
-      <h1 className="inline mx-2 font-mono font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
+      <h1 className="inline mx-2 font-black font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
         CONTACT ME
       </h1>
       <form
