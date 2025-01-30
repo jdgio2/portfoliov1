@@ -1,19 +1,15 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 gsap.registerPlugin(useGSAP); // register the hook to avoid React version discrepancies
-gsap.registerPlugin(MotionPathPlugin);
 
 export default function Hero() {
   const container = useRef(null);
-
-  const tl = gsap.timeline();
+  const heroHeader = useRef(null);
 
   useGSAP(
     () => {
-      // use selectors...
       gsap.to(".blob0", {
         x: "random(-10, 300, 25)",
         y: "random(-100, 200, 25)",
@@ -78,8 +74,16 @@ export default function Hero() {
         repeatRefresh: true,
         ease: "sine.inOut",
       });
+      gsap.from(".blob", { opacity: 0, duration: 4 });
     },
     { scope: container }
+  );
+
+  useGSAP(
+    () => {
+      gsap.from("span", { y: 200, duration: 2 });
+    },
+    { scope: heroHeader }
   );
   return (
     <section
@@ -87,34 +91,48 @@ export default function Hero() {
       id="hero"
       className="flex flex-col items-center mb-10 h-[95vh] justify-center z-10 overflow-hidden relative"
     >
-      <div className="blob0 w-72 h-72 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20 left-10">
+      <div className="blob blob0 w-72 h-72 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20 left-10">
         blob0
       </div>
-      <div className="blob1 w-72 h-72 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20 right-10">
+      <div className="blob blob1 w-72 h-72 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20 right-10">
         blob1
       </div>
-      <div className="blob2 w-24 h-24 rounded-full blur-2xl absolute bg-red-200 -z-10 top-20 right-100">
+      <div className="blob blob2 w-24 h-24 rounded-full blur-2xl absolute bg-red-200 -z-10 top-20 right-100">
         blob2
       </div>
-      <div className="blob3 w-48 h-48 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20">
+      <div className="blob blob3 w-48 h-48 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20">
         blob3
       </div>
-      <div className="blob4 w-48 h-48 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 left-10 ">
+      <div className="blob blob4 w-48 h-48 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 left-10 ">
         blob4
       </div>
-      <div className="blob5 w-24 h-24 rounded-full blur-2xl absolute bg-purple-200 -z-10 bottom-0 right-10">
+      <div className="blob blob5 w-24 h-24 rounded-full blur-2xl absolute bg-purple-200 -z-10 bottom-0 right-10">
         blob5
       </div>
-      <div className="blob6 w-72 h-72 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 right-100">
+      <div className="blob blob6 w-72 h-72 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 right-100">
         blob6
       </div>
-      <div className="blob7 w-72 h-72 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 left-50">
+      <div className="blob blob7 w-72 h-72 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 left-50">
         blob7
       </div>
 
-      <h1 className="font-black my-10 mx-1 text-5xl text-center justify-self-center">
-        Hi! I'm JD.
+      <h1
+        ref={heroHeader}
+        className="font-black my-10 mx-1 text-5xl text-center justify-self-center"
+      >
+        <span className="h1-letter">H</span>
+        <span className="h1-letter">i</span>
+        <span className="h1-letter">!</span>
+        <span className="h1-letter">&nbsp;</span>
+        <span className="h1-letter">I</span>
+        <span className="h1-letter">'</span>
+        <span className="h1-letter">m</span>
+        <span className="h1-letter">&nbsp;</span>
+        <span className="h1-letter">J</span>
+        <span className="h1-letter">D</span>
+        <span className="h1-letter">.</span>
       </h1>
+
       <h2 className="text-center text-xl my-8 mx-2 text-gray-500">
         A software developer with a love for delivering value in all that I
         create.
