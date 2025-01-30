@@ -9,53 +9,71 @@ gsap.registerPlugin(MotionPathPlugin);
 export default function Hero() {
   const container = useRef(null);
 
+  const tl = gsap.timeline();
+
   useGSAP(
     () => {
       // use selectors...
+      gsap.to(".blob0", {
+        x: "random(-10, 300, 25)",
+        y: "random(-100, 200, 25)",
+        duration: 3.7,
+        repeat: -1,
+        repeatRefresh: true,
+        ease: "sine.inOut",
+      });
       gsap.to(".blob1", {
-        x: "random(-400, 100, 50)",
-        y: "random(-100, 200, 50)",
+        x: "random(-400, 100, 25)",
+        y: "random(-100, 200, 25)",
         duration: 5,
         repeat: -1,
         repeatRefresh: true,
         ease: "sine.inOut",
       });
       gsap.to(".blob2", {
-        x: "random(-400, 100, 50)",
-        y: "random(-100, 200, 50)",
-        duration: 5,
+        x: "random(-400, 100, 25)",
+        y: "random(-100, 200, 25)",
+        duration: 3.5,
         repeat: -1,
         repeatRefresh: true,
         ease: "sine.inOut",
       });
       gsap.to(".blob3", {
-        x: "random(-400, 100, 50)",
-        y: "random(-100, 200, 50)",
-        duration: 5,
+        x: "random(-400, 100, 25)",
+        y: "random(-100, 200, 25)",
+        duration: 3,
         repeat: -1,
         repeatRefresh: true,
         ease: "sine.inOut",
       });
       gsap.to(".blob4", {
-        x: "random(-50, 400, 50)",
-        y: "random(-400, 50, 50)",
+        x: "random(-50, 400, 25)",
+        y: "random(-400, 50, 25)",
         duration: 5,
         repeat: -1,
         repeatRefresh: true,
         ease: "sine.inOut",
       });
       gsap.to(".blob5", {
-        x: "random(-400, 100, 50)",
-        y: "random(-400, 50, 50)",
-        duration: 3,
+        x: "random(-400, 100, 25)",
+        y: "random(-400, 50, 25)",
+        duration: 3.9,
         repeat: -1,
         repeatRefresh: true,
         ease: "sine.inOut",
       });
       gsap.to(".blob6", {
-        x: "random(-400, 100, 50)",
-        y: "random(-400, 50, 50)",
-        duration: 3,
+        x: "random(-400, 100, 25)",
+        y: "random(-400, 50, 25)",
+        duration: 2.8,
+        repeat: -1,
+        repeatRefresh: true,
+        ease: "sine.inOut",
+      });
+      gsap.to(".blob7", {
+        x: "random(-100, 300, 25)",
+        y: "random(-400, 50, 25)",
+        duration: 3.4,
         repeat: -1,
         repeatRefresh: true,
         ease: "sine.inOut",
@@ -69,10 +87,13 @@ export default function Hero() {
       id="hero"
       className="flex flex-col items-center mb-10 h-[95vh] justify-center z-10 overflow-hidden relative"
     >
+      <div className="blob0 w-72 h-72 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20 left-10">
+        blob0
+      </div>
       <div className="blob1 w-72 h-72 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20 right-10">
         blob1
       </div>
-      <div className="blob2 w-24 h-24 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20 right-100">
+      <div className="blob2 w-24 h-24 rounded-full blur-2xl absolute bg-red-200 -z-10 top-20 right-100">
         blob2
       </div>
       <div className="blob3 w-48 h-48 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20">
@@ -81,11 +102,14 @@ export default function Hero() {
       <div className="blob4 w-48 h-48 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 left-10 ">
         blob4
       </div>
-      <div className="blob5 w-24 h-24 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 right-10">
+      <div className="blob5 w-24 h-24 rounded-full blur-2xl absolute bg-purple-200 -z-10 bottom-0 right-10">
         blob5
       </div>
       <div className="blob6 w-72 h-72 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 right-100">
         blob6
+      </div>
+      <div className="blob7 w-72 h-72 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 left-50">
+        blob7
       </div>
 
       <h1 className="font-black my-10 mx-1 text-5xl text-center justify-self-center">
