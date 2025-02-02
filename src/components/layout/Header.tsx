@@ -7,34 +7,34 @@ export default function Header() {
 
   const tl = gsap.timeline();
 
-  // useGSAP(() => {
-  //   tl.from("#logo-bg", {
-  //     delay: 1,
-  //     scale: 0,
-  //     transformOrigin: "50% 50%",
-  //     duration: 1.5,
-  //     ease: "bounce.in",
-  //   })
-  //     .from("#logo-j", {
-  //       scale: 0,
-  //       transformOrigin: "50% 50%",
-  //       duration: 0.3,
-  //       ease: "power2.out",
-  //     })
-  //     .from("#logo-d", {
-  //       scale: 0,
-  //       transformOrigin: "50% 50%",
-  //       duration: 0.3,
-  //       ease: "power2.out",
-  //     })
-  //     .from(".nav-item", {
-  //       opacity: 0,
-  //       y: -20,
-  //       duration: 0.8,
-  //       stagger: 0.1,
-  //       ease: "power2.out",
-  //     });
-  // });
+  useGSAP(() => {
+    tl.from("#logo-bg", {
+      delay: 1,
+      scale: 0,
+      transformOrigin: "50% 50%",
+      duration: 1.5,
+      ease: "bounce.in",
+    })
+      .from("#logo-j", {
+        scale: 0,
+        transformOrigin: "50% 50%",
+        duration: 0.3,
+        ease: "power2.out",
+      })
+      .from("#logo-d", {
+        scale: 0,
+        transformOrigin: "50% 50%",
+        duration: 0.3,
+        ease: "power2.out",
+      })
+      .from(".nav-item", {
+        opacity: 0,
+        y: -20,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out",
+      });
+  });
 
   return (
     <section
