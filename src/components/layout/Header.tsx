@@ -7,35 +7,34 @@ export default function Header() {
 
   const tl = gsap.timeline();
 
-  useGSAP(() => {
-    tl.from("#logo-bg", {
-      scale: 0,
-      transformOrigin: "50% 50%",
-      duration: 1.5,
-      ease: "bounce.in",
-    })
-      .from("#logo-j", {
-        scale: 0,
-        transformOrigin: "50% 50%",
-        duration: 0.3,
-        ease: "power2.out",
-      })
-      .from("#logo-d", {
-        scale: 0,
-        transformOrigin: "50% 50%",
-        duration: 0.3,
-        ease: "power2.out",
-      });
-
-    gsap.from(".nav-item", {
-      opacity: 0,
-      y: -20,
-      duration: 0.8,
-      delay: 1,
-      stagger: 0.1,
-      ease: "power2.out",
-    });
-  }, []);
+  // useGSAP(() => {
+  //   tl.from("#logo-bg", {
+  //     delay: 1,
+  //     scale: 0,
+  //     transformOrigin: "50% 50%",
+  //     duration: 1.5,
+  //     ease: "bounce.in",
+  //   })
+  //     .from("#logo-j", {
+  //       scale: 0,
+  //       transformOrigin: "50% 50%",
+  //       duration: 0.3,
+  //       ease: "power2.out",
+  //     })
+  //     .from("#logo-d", {
+  //       scale: 0,
+  //       transformOrigin: "50% 50%",
+  //       duration: 0.3,
+  //       ease: "power2.out",
+  //     })
+  //     .from(".nav-item", {
+  //       opacity: 0,
+  //       y: -20,
+  //       duration: 0.8,
+  //       stagger: 0.1,
+  //       ease: "power2.out",
+  //     });
+  // });
 
   return (
     <section
@@ -46,7 +45,7 @@ export default function Header() {
       <nav className="justify-center md:justify-around items-center p-1 shadow-xs backdrop-blur-lg bg-linear-to-t via-white/50 via-20% from-white/20 to-white/100 flex flex-row">
         <a
           href="#"
-          className="md:block text-lg font-semibold"
+          className="md:block text-lg font-semibold hover:scale-110 transition-all"
           aria-label="Logo"
         >
           <svg
@@ -77,25 +76,25 @@ export default function Header() {
         </a>
         <a
           href="#intro"
-          className="nav-item hidden md:block text-lg font-semibold"
+          className="nav-item hidden md:block text-lg font-semibold hover:scale-110 transition-all duration-100"
         >
           Intro
         </a>
         <a
           href="#skills"
-          className="nav-item hidden md:block text-lg font-semibold"
+          className="nav-item hidden md:block text-lg font-semibold hover:scale-110 transition-all duration-100"
         >
           Skills
         </a>
         <a
           href="#projects"
-          className="nav-item hidden md:block text-lg font-semibold"
+          className="nav-item hidden md:block text-lg font-semibold hover:scale-110 transition-all duration-100"
         >
           Projects
         </a>
         <a
           href="#contact"
-          className="nav-item hidden md:block text-lg font-semibold"
+          className="nav-item hidden md:block text-lg font-semibold hover:scale-110 transition-all duration-100"
         >
           Contact
         </a>
