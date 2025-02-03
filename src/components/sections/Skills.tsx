@@ -11,8 +11,8 @@ export default function Skills() {
       id="skills"
       className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
     >
-      <h1 className="inline mx-2 font-black font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
-        SKILLS AND TECHNOLOGIES
+      <h1 className="inline mx-2 font-bold text-4xl text-center border-b-2 border-indigo-300 pb-4 mb-8">
+        Skills and Technologies
       </h1>
 
       <MyDialog open={open} setOpen={setOpen}>
@@ -55,7 +55,7 @@ export default function Skills() {
       </MyDialog>
 
       <button
-        className="bg-slate-100 border-onahau-100 py-6 px-8 mx-2 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-md"
+        className="bg-slate-100 border-indigo-100 rounded-md cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:scale-105 hover:drop-shadow-lg"
         onClick={() => setOpen(true)}
       >
         <div className="flex flex-row justify-center gap-10 flex-wrap">

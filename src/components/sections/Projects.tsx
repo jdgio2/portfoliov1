@@ -15,7 +15,7 @@ export default function Projects() {
       id="projects"
       className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
     >
-      <h1 className="text-center mx-2 inline font-black font-bold text-5xl border-b-2 border-onahau-300 pb-4 mb-8">
+      <h1 className="text-center mx-2 inline font-bold text-5xl border-b-2 border-indigo-300 pb-4 mb-8">
         PROJECTS
       </h1>
 
@@ -32,19 +32,19 @@ export default function Projects() {
 
       <div className="flex flex-col items-center justify-items-center p-2 gap-12">
         <button
-          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
+          className="bg-slate-100 border-indigo-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
           onClick={() => setProj1Open(true)}
         >
           Project 1
         </button>
         <button
-          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
+          className="bg-slate-100 border-indigo-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
           onClick={() => setProj2Open(true)}
         >
           Project 2
         </button>
         <button
-          className="bg-slate-100 border-onahau-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
+          className="bg-slate-100 border-indigo-100 h-60 w-60 drop-shadow-md hover:shadow-xs hover:drop-shadow-lg rounded-full"
           onClick={() => setProj3Open(true)}
         >
           Project 3
