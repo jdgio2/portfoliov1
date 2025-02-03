@@ -45,7 +45,7 @@ export default function Header() {
       <nav className="justify-center md:justify-around items-center p-1 shadow-xs backdrop-blur-lg bg-linear-to-t via-white/50 via-20% from-white/20 to-white/100 flex flex-row">
         <a
           href="#"
-          className="md:block text-lg font-semibold hover:scale-110 transition-all"
+          className="md:block text-lg font-semibold hover:scale-110 transition-[scale]"
           aria-label="Logo"
         >
           <svg
@@ -75,26 +75,26 @@ export default function Header() {
           </svg>
         </a>
         <a
-          href="#intro"
-          className="nav-item hidden md:block text-lg font-semibold hover:scale-110 transition-all duration-100"
+          href="#about-me"
+          className="nav-item hidden md:block text-lg font-semibold hover:text-slate-600 transition-[scale]"
         >
-          Intro
+          About Me
         </a>
         <a
           href="#skills"
-          className="nav-item hidden md:block text-lg font-semibold hover:scale-110 transition-all duration-100"
+          className="nav-item hidden md:block text-lg font-semibold hover:text-slate-600"
         >
           Skills
         </a>
         <a
           href="#projects"
-          className="nav-item hidden md:block text-lg font-semibold hover:scale-110 transition-all duration-100"
+          className="nav-item hidden md:block text-lg font-semibold hover:text-slate-600"
         >
           Projects
         </a>
         <a
           href="#contact"
-          className="nav-item hidden md:block text-lg font-semibold hover:scale-110 transition-all duration-100"
+          className="nav-item hidden md:block text-lg font-semibold hover:text-slate-600"
         >
           Contact
         </a>
