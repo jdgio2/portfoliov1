@@ -14,24 +14,6 @@ export default {
     "-translate-x-[800%]",
     "-translate-x-[900%]",
   ],
-  theme: {
-    extend: {
-      colors: {
-        onahau: {
-          50: "#ecfdff",
-          100: "#cdf6fe",
-          200: "#a5ecfc",
-          300: "#67ddf9",
-          400: "#22c3ee",
-          500: "#06a6d4",
-          600: "#0884b2",
-          700: "#0e6a90",
-          800: "#155675",
-          900: "#164863",
-          950: "#082e44",
-        },
-      },
-    },
-  },
+  theme: {},
   plugins: [],
 };
