@@ -16,11 +16,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        hero: ["Abril Fatface", "serif"],
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
-        mono: ["Space Mono", "sans-serif"],
-      },
       colors: {
         onahau: {
           50: "#ecfdff",

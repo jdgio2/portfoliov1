@@ -139,7 +139,7 @@ export default function Hero() {
         A software developer with a love for delivering value in all that I
         create.
       </h2>
-      <a href="#intro" id="about-me-btn">
+      <a href="#about-me" id="about-me-btn">
         <button className="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-indigo-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-indigo-600">
           <span className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500 via-cyan-500 to-sky-600 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           <span className="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950">

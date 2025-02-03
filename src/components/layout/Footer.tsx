@@ -42,7 +42,9 @@ export default function Footer() {
           </svg>
         </a>
       </div>
-      <p className="mt-5">JD Giovannetti &copy; {new Date().getFullYear()}</p>
+      <p className="mt-5 text-slate-400">
+        JD Giovannetti &copy; {new Date().getFullYear()}
+      </p>
     </section>
   );
 }
