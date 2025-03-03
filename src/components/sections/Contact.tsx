@@ -56,7 +56,7 @@ export default function Contact() {
       id="contact"
       className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
     >
-      <h1 className="inline mx-2 font-black font-bold text-5xl text-center border-b-2 border-indigo-300 pb-4 mb-8">
+      <h1 className="inline mx-2 font-black font-bold text-5xl text-center border-b-2 border-onahau-300 pb-4 mb-8">
         CONTACT ME
       </h1>
       <form
@@ -76,7 +76,7 @@ export default function Contact() {
               name="first_name"
               type="text"
               autoComplete="given-name"
-              className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+              className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-onahau-600 sm:text-sm/6"
               required
             />
           </div>
@@ -95,7 +95,7 @@ export default function Contact() {
               name="last_name"
               type="text"
               autoComplete="family-name"
-              className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+              className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-onahau-600 sm:text-sm/6"
               required
             />
           </div>
@@ -117,7 +117,7 @@ export default function Contact() {
               className="block w-full rounded-md bg-white px-3 py-1.5 text-base 
               text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300
               placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 
-              focus:outline-indigo-600 sm:text-sm/6 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+              focus:outline-onahau-600 sm:text-sm/6 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
       invalid:outline-pink-500 invalid:text-pink-600
       focus:invalid:outline-pink-500 focus:invalid:ring-pink-500 peer"
             />
@@ -141,14 +141,14 @@ export default function Contact() {
               className="block w-full rounded-md h-36 bg-white px-3 py-1.5 
               text-base text-gray-900 outline outline-1 -outline-offset-1 
               outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 
-              focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+              focus:-outline-offset-2 focus:outline-onahau-600 sm:text-sm/6"
               required
             />
           </div>
         </div>
         <button
           type="submit"
-          className="bg-indigo-300 rounded-md backdrop-blur-3xl p-2"
+          className="bg-onahau-300 rounded-md backdrop-blur-3xl p-2"
         >
           {submissionStatus === "success" && "Success!"}
           {submissionStatus === "error" && "ERROR"}

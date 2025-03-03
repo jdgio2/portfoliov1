@@ -60,7 +60,7 @@ export default function Carousel({ images }: Props) {
           >
             <div
               className="flex justify-center items-center w-9 h-9 rounded-full bg-slate-400 
-        opacity-80 transition ease-in-out hover:bg-slate-500 hover:scale-110 active:bg-slate-700 "
+        opacity-80 transition ease-in-out hover:bg-slate-500 hover:scale-110 active:bg-slate-700 font-mono"
             >
               <p>{"<"}</p>
             </div>
@@ -71,7 +71,7 @@ export default function Carousel({ images }: Props) {
           >
             <div
               className="flex justify-center items-center w-9 h-9 rounded-full bg-slate-400 
-        opacity-80 transition ease-in-out hover:bg-slate-500 hover:scale-110 active:bg-slate-700 "
+        opacity-80 transition ease-in-out hover:bg-slate-500 hover:scale-110 active:bg-slate-700 font-mono"
             >
               <p>{">"}</p>
             </div>

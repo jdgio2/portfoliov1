@@ -3,18 +3,18 @@ import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
 import Intro from "./components/sections/Intro";
 import Projects from "./components/sections/Projects";
-import Skills from "./components/sections/Skills";
+import Skills from "./components/sections/Skills/Skills";
 import Contact from "./components/sections/Contact";
 export default function App() {
-  return (
-    <>
-      <Header></Header>
-      <Hero></Hero>
-      <Intro></Intro>
-      <Skills></Skills>
-      <Projects></Projects>
-      <Contact></Contact>
-      <Footer></Footer>
-    </>
-  );
+    return (
+        <>
+            <Header></Header>
+            <Hero></Hero>
+            <Intro></Intro>
+            <Skills></Skills>
+            <Projects></Projects>
+            <Contact></Contact>
+            <Footer></Footer>
+        </>
+    );
 }
