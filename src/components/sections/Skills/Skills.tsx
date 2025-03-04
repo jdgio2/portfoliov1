@@ -62,15 +62,17 @@ export default function Skills() {
                 onClick={() => setOpen(true)}
             >
                 <div className="flex flex-row justify-center gap-10 flex-wrap">
-                    <i className="text-8xl devicon-html5-plain colored"></i>
-                    <i className="text-8xl devicon-css3-plain colored"></i>
-                    <i className="text-8xl devicon-javascript-plain colored"></i>
-                    <i className="text-8xl devicon-typescript-plain colored"></i>
-                    <i className="text-8xl devicon-react-plain colored"></i>
-                    <i className="text-8xl devicon-nodejs-plain-wordmark colored"></i>
-                    <i className="text-8xl devicon-express-original colored"></i>
-                    <i className="text-8xl devicon-tailwindcss-plain colored"></i>
-                    <i className="text-8xl devicon-postgresql-plain colored"></i>
+                    {Object.keys(validIcons).map((item, i) =>
+                        i <= 9 ? (
+                            <img
+                                className="h-24 w-24"
+                                src={validIcons[item as IconKey].imgUrl}
+                                alt={validIcons[item as IconKey].name}
+                            />
+                        ) : (
+                            <></>
+                        )
+                    )}
                 </div>
                 <p className="font-black mt-6 text-xl text-slate-400">
                     CLICK TO EXPAND

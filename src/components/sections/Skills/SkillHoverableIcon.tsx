@@ -5,13 +5,15 @@ interface Props {
 
 export default function SkillHoverableIcon({ icon }: Props) {
     const iconName: string = validIcons[icon].name;
-    const iconClassName: string = validIcons[icon].className;
+    const iconUrl: string = validIcons[icon].imgUrl;
     return (
         <div className="flex flex-col-reverse relative justify-items-center group">
-            <i
-                className={`text-8xl ${iconClassName}`}
-                aria-label={iconClassName}
-            ></i>
+            <img
+                src={iconUrl}
+                className="h-24 w-24"
+                aria-label={iconName}
+            ></img>
+
             <span
                 className="absolute -top-11 left-[50%] -translate-x-[50%] 
   z-100 scale-0 px-3 rounded-lg border 
