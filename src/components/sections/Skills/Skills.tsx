@@ -15,7 +15,6 @@ export default function Skills() {
         gsap.utils.toArray("#skills *").forEach((el) =>
             gsap.from(el as gsap.TweenTarget, {
                 y: 100,
-
                 opacity: 0,
                 stagger: 0.2,
                 scrollTrigger: { trigger: "#skills", start: "top 40% center" },
@@ -32,6 +31,7 @@ export default function Skills() {
                 SKILLS AND TECHNOLOGIES
             </h1>
 
+            {/* The dialog itself */}
             <MyDialog open={open} setOpen={setOpen}>
                 <DialogTitle className="text-center font-bold text-xl mb-4">
                     Technologies
@@ -74,8 +74,9 @@ export default function Skills() {
                 </p>
             </MyDialog>
 
+            {/* The container to click to open the dialog */}
             <button
-                className="bg-slate-100 border-indigo-100 rounded-md cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:scale-105 hover:drop-shadow-lg"
+                className="bg-slate-100 border-indigo-100 rounded-md cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
                 onClick={() => setOpen(true)}
             >
                 <div className="flex flex-row justify-center gap-10 flex-wrap">

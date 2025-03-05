@@ -19,7 +19,6 @@ export default function Projects() {
         gsap.utils.toArray("#projects *").forEach((el) =>
             gsap.from(el as gsap.TweenTarget, {
                 y: 100,
-
                 opacity: 0,
                 stagger: 0.2,
                 scrollTrigger: {
@@ -52,19 +51,19 @@ export default function Projects() {
 
             <div className="flex flex-col items-center justify-items-center p-2 gap-12">
                 <button
-                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:scale-105 hover:drop-shadow-lg"
+                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
                     onClick={() => setProj1Open(true)}
                 >
                     Project 1
                 </button>
                 <button
-                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:scale-105 hover:drop-shadow-lg"
+                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
                     onClick={() => setProj2Open(true)}
                 >
                     Project 2
                 </button>
                 <button
-                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:scale-105 hover:drop-shadow-lg"
+                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
                     onClick={() => setProj3Open(true)}
                 >
                     Project 3

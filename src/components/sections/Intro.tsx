@@ -9,7 +9,6 @@ export default function Intro() {
         gsap.utils.toArray("#about-me *").forEach((el) =>
             gsap.from(el as gsap.TweenTarget, {
                 y: 100,
-
                 opacity: 0,
                 stagger: 0.2,
                 scrollTrigger: {

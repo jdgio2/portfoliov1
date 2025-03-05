@@ -11,7 +11,6 @@ export default function Contact() {
         gsap.utils.toArray("#contact *").forEach((el) =>
             gsap.from(el as gsap.TweenTarget, {
                 y: 100,
-
                 opacity: 0,
                 stagger: 0.2,
                 scrollTrigger: { trigger: "#contact", start: "top 40% center" },
