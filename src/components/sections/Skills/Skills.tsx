@@ -76,7 +76,9 @@ export default function Skills() {
 
             {/* The container to click to open the dialog */}
             <button
-                className="bg-slate-100 border-indigo-100 rounded-md cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
+                className="bg-slate-100 border-indigo-100 rounded-md cursor-pointer 
+                py-6 px-8 mx-2 max-w-[800px]
+                drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
                 onClick={() => setOpen(true)}
             >
                 <div className="flex flex-row justify-center gap-10 flex-wrap">
