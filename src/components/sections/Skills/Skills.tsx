@@ -3,16 +3,33 @@ import MyDialog from "./MyDialog";
 import SkillHoverableIcon from "./SkillHoverableIcon";
 import { DialogTitle } from "@headlessui/react";
 import { validIcons, IconKey } from "../../../assets/validicons";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 export default function Skills() {
     const [open, setOpen] = useState(false);
+
+    useGSAP(() => {
+        gsap.utils.toArray("#skills *").forEach((el) =>
+            gsap.from(el as gsap.TweenTarget, {
+                y: 100,
+
+                opacity: 0,
+                stagger: 0.2,
+                scrollTrigger: { trigger: "#skills", start: "top 40% center" },
+            })
+        );
+    });
 
     return (
         <section
             id="skills"
-            className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
+            className="py-10 flex flex-col items-center mx-1 scroll-mt-16"
         >
-            <h1 className="inline mx-2 font-bold text-4xl text-center border-b-2 border-indigo-300 pb-4 mb-8">
-                Skills and Technologies
+            <h1 className="text-center mx-2 inline font-bold text-4xl border-b-2 border-indigo-300 pb-4 mb-8">
+                SKILLS AND TECHNOLOGIES
             </h1>
 
             <MyDialog open={open} setOpen={setOpen}>

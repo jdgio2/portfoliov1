@@ -4,18 +4,38 @@ import { useState } from "react";
 import tester from "../../assets/projects/testerimage.jpg";
 import tester2 from "../../assets/projects/tester2.png";
 import tester3 from "../../assets/projects/tester3.jpg";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
     const [proj1Open, setProj1Open] = useState(false);
     const [proj2Open, setProj2Open] = useState(false);
     const [proj3Open, setProj3Open] = useState(false);
 
+    useGSAP(() => {
+        gsap.utils.toArray("#projects *").forEach((el) =>
+            gsap.from(el as gsap.TweenTarget, {
+                y: 100,
+
+                opacity: 0,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: "#projects",
+                    start: "top 40% center",
+                },
+            })
+        );
+    });
+
     return (
         <section
             id="projects"
-            className="py-10 flex flex-col items-center mx-1 scroll-mt-32"
+            className="py-10 flex flex-col items-center mx-1 scroll-mt-16"
         >
-            <h1 className="text-center mx-2 inline font-bold text-5xl border-b-2 border-indigo-300 pb-4 mb-8">
+            <h1 className="text-center mx-2 inline font-bold text-4xl border-b-2 border-indigo-300 pb-4 mb-8">
                 PROJECTS
             </h1>
 
