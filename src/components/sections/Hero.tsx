@@ -154,7 +154,7 @@ export default function Hero() {
             <a href="#about-me" id="about-me-btn">
                 <button
                     className="relative inline-block p-px font-semibold leading-6 text-white 
-                bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-indigo-900 transition-all 
+                bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-indigo-900 transition-shadow 
                 duration-300 ease-in-out active:scale-95 hover:shadow-indigo-600"
                 >
                     <span

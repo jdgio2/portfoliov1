@@ -101,7 +101,6 @@ export default function Contact() {
                         />
                     </div>
                 </div>
-
                 <div className="sm:col-span-3">
                     <label
                         htmlFor="last_name"
@@ -123,7 +122,6 @@ export default function Contact() {
                         />
                     </div>
                 </div>
-
                 <div className="sm:col-span-full">
                     <label
                         htmlFor="email"
@@ -149,7 +147,6 @@ export default function Contact() {
                         </p>
                     </div>
                 </div>
-
                 <div className="col-span-full">
                     <label
                         htmlFor="message"
@@ -171,7 +168,7 @@ export default function Contact() {
                 </div>
                 <button
                     type="submit"
-                    className="bg-indigo-300 rounded-md backdrop-blur-3xl p-2 cursur"
+                    className="text-white font-semibold rounded-2xl shadow-2xl backdrop-blur-3xl p-2 cursor-pointer bg-neutral-900 shadow-indigo-900 hover:shadow-indigo-600 transition-shadow duration-300"
                 >
                     {submissionStatus === "success" && "Success!"}
                     {submissionStatus === "error" && "ERROR"}
