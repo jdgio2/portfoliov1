@@ -1,10 +1,9 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(useGSAP); // register the hook to avoid React version discrepancies
+gsap.registerPlugin(useGSAP);
 
-export default function Hero() {
-    const tl = gsap.timeline();
+function Blobs() {
     useGSAP(() => {
         gsap.to(".blob0", {
             x: "random(-10, 300, 25)",
@@ -73,29 +72,8 @@ export default function Hero() {
         gsap.from(".blob", { opacity: 0, duration: 4, stagger: 0.3 });
     });
 
-    useGSAP(() => {
-        tl.from(".h1-letter", {
-            delay: 1,
-            y: 100,
-            opacity: 0,
-            stagger: 0.1,
-        })
-            .from("#hero-h2", {
-                y: 100,
-                opacity: 0,
-                stagger: 0.1,
-            })
-            .from("#about-me-btn", {
-                y: 100,
-                opacity: 0,
-                stagger: 0.1,
-            });
-    });
     return (
-        <section
-            id="hero"
-            className="flex flex-col items-center mb-10 h-[95vh] justify-center z-10 overflow-hidden relative"
-        >
+        <>
             <div className="blob blob0 w-72 h-72 rounded-full blur-3xl absolute bg-red-200 -z-10 top-20 left-10">
                 blob0
             </div>
@@ -120,7 +98,38 @@ export default function Hero() {
             <div className="blob blob7 w-72 h-72 rounded-full blur-3xl absolute bg-purple-200 -z-10 bottom-0 left-50">
                 blob7
             </div>
+        </>
+    );
+}
 
+export default function Hero() {
+    const tl = gsap.timeline();
+
+    useGSAP(() => {
+        tl.from(".h1-letter", {
+            delay: 1,
+            y: 100,
+            opacity: 0,
+            stagger: 0.1,
+        })
+            .from("#hero-h2", {
+                y: 100,
+                opacity: 0,
+                stagger: 0.1,
+            })
+            .from("#about-me-btn", {
+                y: 100,
+                opacity: 0,
+                stagger: 0.1,
+            });
+    });
+
+    return (
+        <section
+            id="hero"
+            className="flex flex-col items-center mb-10 h-[95vh] justify-center z-10 overflow-hidden relative"
+        >
+            <Blobs />
             <h1 className="font-black my-10 mx-1 text-6xl text-center justify-self-center">
                 <span className="h1-letter inline-block">H</span>
                 <span className="h1-letter inline-block">i</span>
@@ -135,7 +144,6 @@ export default function Hero() {
                 <span className="h1-letter inline-block">D</span>
                 <span className="h1-letter inline-block">.</span>
             </h1>
-
             <h2
                 id="hero-h2"
                 className="text-center text-xl my-8 mx-2 text-gray-500"
