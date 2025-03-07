@@ -33,45 +33,49 @@ export default function Skills() {
 
             {/* The dialog itself */}
             <MyDialog open={open} setOpen={setOpen}>
-                <DialogTitle className="text-center font-bold text-xl mb-4">
-                    Technologies
-                </DialogTitle>
-                <div className="flex flex-row justify-center gap-10 flex-wrap">
-                    {Object.keys(validIcons).map((item) => {
-                        if (
-                            validIcons[item as IconKey].iconType ===
-                            "full-stack"
-                        ) {
-                            return (
-                                <SkillHoverableIcon
-                                    icon={item as IconKey}
-                                    key={item}
-                                ></SkillHoverableIcon>
-                            );
-                        }
-                    })}
+                <div>
+                    <DialogTitle className="text-center font-bold text-xl mb-4">
+                        Technologies
+                    </DialogTitle>
+                    <div className="flex flex-row justify-center gap-10 flex-wrap">
+                        {Object.keys(validIcons).map((item) => {
+                            if (
+                                validIcons[item as IconKey].iconType ===
+                                "full-stack"
+                            ) {
+                                return (
+                                    <SkillHoverableIcon
+                                        icon={item as IconKey}
+                                        key={item}
+                                    ></SkillHoverableIcon>
+                                );
+                            }
+                        })}
+                    </div>
+                    <DialogTitle className="text-center font-bold text-xl mb-4 mt-20 ">
+                        Other Languages and Tools
+                    </DialogTitle>
+                    <div className="flex flex-row justify-center gap-10 flex-wrap">
+                        {Object.keys(validIcons).map((item) => {
+                            if (
+                                validIcons[item as IconKey].iconType === "other"
+                            ) {
+                                return (
+                                    <SkillHoverableIcon
+                                        icon={item as IconKey}
+                                        key={item}
+                                    ></SkillHoverableIcon>
+                                );
+                            }
+                        })}
+                    </div>
+                    <p className="md:hidden font-black mt-6 text-xl text-slate-400 text-center">
+                        TAP TO SEE TITLES
+                    </p>
+                    <p className="hidden md:block font-black mt-6 text-xl text-slate-400 text-center">
+                        HOVER TO SEE TITLES
+                    </p>
                 </div>
-                <DialogTitle className="text-center font-bold text-xl mb-4 mt-20 ">
-                    Other Languages and Tools
-                </DialogTitle>
-                <div className="flex flex-row justify-center gap-10 flex-wrap">
-                    {Object.keys(validIcons).map((item) => {
-                        if (validIcons[item as IconKey].iconType === "other") {
-                            return (
-                                <SkillHoverableIcon
-                                    icon={item as IconKey}
-                                    key={item}
-                                ></SkillHoverableIcon>
-                            );
-                        }
-                    })}
-                </div>
-                <p className="md:hidden font-black mt-6 text-xl text-slate-400 text-center">
-                    TAP TO SEE TITLES
-                </p>
-                <p className="hidden md:block font-black mt-6 text-xl text-slate-400 text-center">
-                    HOVER TO SEE TITLES
-                </p>
             </MyDialog>
 
             {/* The container to click to open the dialog */}
