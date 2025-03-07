@@ -102,12 +102,13 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="py-10 flex flex-col items-center mx-1 scroll-mt-16"
+            className="my-10 py-10 flex flex-col items-center mx-1 scroll-mt-16"
         >
             <h1 className="text-center mx-2 inline font-bold text-4xl border-b-2 border-indigo-300 pb-4 mb-8">
                 PROJECTS
             </h1>
 
+            {/* The dialogs themselves */}
             <MyDialog open={proj1Open} setOpen={setProj1Open}>
                 <ProjectModalInfo
                     title="Entask"
@@ -136,7 +137,8 @@ export default function Projects() {
                 />
             </MyDialog>
 
-            <div className="flex flex-col items-center justify-items-center p-2 gap-12">
+            {/* Buttons to open dialogs */}
+            <div className="flex flex-col md:flex-row items-center justify-items-center p-2 gap-12">
                 <ProjectButton
                     title="Entask"
                     logoPath="src/assets/projects/logos/entask.svg"

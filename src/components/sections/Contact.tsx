@@ -71,7 +71,7 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="py-10 flex flex-col items-center mx-1 scroll-mt-16"
+            className="py-10 mt-10 flex flex-col items-center mx-1 scroll-mt-16"
         >
             <h1 className="inline mx-2 font-bold text-4xl text-center border-b-2 border-indigo-300 pb-4 mb-8">
                 CONTACT ME
@@ -170,6 +170,7 @@ export default function Contact() {
                     type="submit"
                     className="text-white font-semibold rounded-2xl shadow-2xl backdrop-blur-3xl p-2 cursor-pointer bg-neutral-900 shadow-indigo-900 hover:shadow-indigo-600 transition-shadow duration-300"
                 >
+                    {/* Show different types of  button depending on form submission state */}
                     {submissionStatus === "success" && "Success!"}
                     {submissionStatus === "error" && "ERROR"}
                     {submissionStatus === "idle" && "Submit"}

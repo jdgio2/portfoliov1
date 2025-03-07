@@ -25,7 +25,7 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="py-10 flex flex-col items-center mx-1 scroll-mt-16"
+            className="py-10 my-10 flex flex-col items-center mx-1 scroll-mt-16"
         >
             <h1 className="text-center mx-2 inline font-bold text-4xl border-b-2 border-indigo-300 pb-4 mb-8">
                 SKILLS AND TECHNOLOGIES
