@@ -11,6 +11,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
+interface ProjectButtonProps {
+    title: string;
+    logoPath: string;
+    setProjOpen: (arg0: boolean) => void;
+}
+function ProjectButton({ title, logoPath, setProjOpen }: ProjectButtonProps) {
+    return (
+        <button
+            className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
+            onClick={() => setProjOpen(true)}
+        >
+            <img
+                className="w-full h-full object-contain"
+                src={logoPath}
+                alt={title}
+            />
+        </button>
+    );
+}
+
 export default function Projects() {
     const [proj1Open, setProj1Open] = useState(false);
     const [proj2Open, setProj2Open] = useState(false);
@@ -51,36 +71,21 @@ export default function Projects() {
             </MyDialog>
 
             <div className="flex flex-col items-center justify-items-center p-2 gap-12">
-                <button
-                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
-                    onClick={() => setProj1Open(true)}
-                >
-                    <img
-                        className="w-full h-full object-contain"
-                        src="src/assets/projects/logos/pythontocpp.svg"
-                        alt="Python to C++ Interpreter"
-                    />
-                </button>
-                <button
-                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
-                    onClick={() => setProj2Open(true)}
-                >
-                    <img
-                        className="w-full h-full object-contain"
-                        src="src/assets/projects/logos/sudokuapp.svg"
-                        alt="Sudoku App"
-                    />
-                </button>
-                <button
-                    className="bg-slate-100 border-indigo-100 h-60 w-60 rounded-full cursor-pointer py-6 px-8 mx-2 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
-                    onClick={() => setProj3Open(true)}
-                >
-                    <img
-                        className="w-full h-full object-contain"
-                        src="src/assets/projects/logos/entask.svg"
-                        alt="Entask"
-                    />
-                </button>
+                <ProjectButton
+                    title="Entask"
+                    logoPath="src/assets/projects/logos/entask.svg"
+                    setProjOpen={setProj1Open}
+                />
+                <ProjectButton
+                    title="Python to C++ Interpreter"
+                    logoPath="src/assets/projects/logos/pythontocpp.svg"
+                    setProjOpen={setProj2Open}
+                />
+                <ProjectButton
+                    title="Sudoku App"
+                    logoPath="src/assets/projects/logos/sudokuapp.svg"
+                    setProjOpen={setProj3Open}
+                />
             </div>
         </section>
     );
