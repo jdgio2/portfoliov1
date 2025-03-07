@@ -31,10 +31,59 @@ function ProjectButton({ title, logoPath, setProjOpen }: ProjectButtonProps) {
     );
 }
 
+interface ProjectModalInfoProps {
+    title: string;
+    skills: Array<string>;
+    description: string;
+    images: Array<string>;
+    url: string;
+}
+function ProjectModalInfo({
+    title,
+    skills,
+    description,
+    images,
+    url,
+}: ProjectModalInfoProps) {
+    return (
+        <>
+            <Carousel images={images}></Carousel>
+            <h1 className="font-bold text-3xl mb-2">{title}</h1>
+            <div className="flex flex-wrap gap-1 mb-4">
+                {skills.map((item) => (
+                    <span
+                        className="px-2 rounded-full text-xs 
+                        border-solid border border-violet-400 text-violet-800 bg-violet-200 font-light"
+                    >
+                        {item}
+                    </span>
+                ))}
+            </div>
+            <p className="mb-8">{description}</p>
+
+            <a href={url} target="_blank">
+                <button className="transition ease-in-out cursor-pointer bg-slate-200 py-1 px-6 rounded-sm font-semibold drop-shadow-xs hover:bg-slate-300 active:bg-slate-500">
+                    Visit Site
+                </button>
+            </a>
+        </>
+    );
+}
+
 export default function Projects() {
     const [proj1Open, setProj1Open] = useState(false);
     const [proj2Open, setProj2Open] = useState(false);
     const [proj3Open, setProj3Open] = useState(false);
+
+    const proj1Skills = [
+        "React",
+        "Tailwind",
+        "Node.js",
+        "TypeScript",
+        "Electron",
+    ];
+    const proj2Skills = ["Java", "Android Studio"];
+    const proj3Skills = ["C++", "Python"];
 
     useGSAP(() => {
         gsap.utils.toArray("#projects *").forEach((el) =>
@@ -60,14 +109,31 @@ export default function Projects() {
             </h1>
 
             <MyDialog open={proj1Open} setOpen={setProj1Open}>
-                <Carousel images={[tester, tester2, tester3]}></Carousel>
-                <p>Deets</p>
+                <ProjectModalInfo
+                    title="Entask"
+                    skills={proj1Skills}
+                    description="Entask is an entirely local smart todo list/calendar app that does helps prioritize tasks based on deadlines and time needed, so you can just look at your tasks today and get cracking!"
+                    images={[tester, tester2, tester3]}
+                    url="https://github.com/matt-bowlby/entask"
+                />
             </MyDialog>
             <MyDialog open={proj2Open} setOpen={setProj2Open}>
-                <p>Details for Project 2</p>
+                <ProjectModalInfo
+                    title="Python to C++ Interpreter"
+                    skills={proj2Skills}
+                    description="Details for Project 2"
+                    images={[]}
+                    url="#"
+                />
             </MyDialog>
             <MyDialog open={proj3Open} setOpen={setProj3Open}>
-                <p>Details for Project 3</p>
+                <ProjectModalInfo
+                    title="Sudoku App"
+                    skills={proj3Skills}
+                    description="Details for Project 3"
+                    images={[]}
+                    url="#"
+                />
             </MyDialog>
 
             <div className="flex flex-col items-center justify-items-center p-2 gap-12">

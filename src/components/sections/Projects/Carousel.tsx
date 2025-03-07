@@ -38,11 +38,11 @@ export default function Carousel({ images }: Props) {
 
     return (
         <div
-            className="relative w-full h-42 bg-orange-700"
+            className="relative w-full h-42 overflow-hidden"
             onMouseEnter={() => setAutoScroll(0)}
             onMouseLeave={() => setAutoScroll(1)}
         >
-            <div className="flex flex-row overflow-hidden bg-indigo-400">
+            <div className="flex flex-row  bg-indigo-400">
                 {images.map((item) => (
                     <img
                         key={item}
