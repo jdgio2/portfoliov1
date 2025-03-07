@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MyDialog from "./MyDialog";
+import MyDialog from "../../layout/MyDialog";
 import SkillHoverableIcon from "./SkillHoverableIcon";
 import { DialogTitle } from "@headlessui/react";
 import { validIcons, IconKey } from "../../../assets/validicons";
@@ -76,7 +76,7 @@ export default function Skills() {
 
             {/* The container to click to open the dialog */}
             <button
-                className="bg-slate-100 border-indigo-100 rounded-md cursor-pointer 
+                className="bg-slate-100 border-indigo-100 rounded-2xl cursor-pointer 
                 py-6 px-8 mx-2 max-w-[800px]
                 drop-shadow-md transition-[scale] hover:shadow-xs hover:drop-shadow-lg"
                 onClick={() => setOpen(true)}
@@ -94,8 +94,11 @@ export default function Skills() {
                         )
                     )}
                 </div>
-                <p className="font-black mt-6 text-xl text-slate-400">
+                <p className="hidden md:block font-black mt-6 text-xl text-slate-400">
                     CLICK TO EXPAND
+                </p>
+                <p className="md:hidden font-black mt-6 text-xl text-slate-400">
+                    TAP TO EXPAND
                 </p>
             </button>
         </section>
