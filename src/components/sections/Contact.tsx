@@ -168,7 +168,7 @@ export default function Contact() {
                 </div>
                 <button
                     type="submit"
-                    className="text-white font-semibold rounded-2xl shadow-2xl backdrop-blur-3xl p-2 cursor-pointer bg-neutral-900 shadow-indigo-900 hover:shadow-indigo-600 transition-shadow duration-300"
+                    className="text-white font-semibold rounded-2xl shadow-2xl md:col-span-full backdrop-blur-3xl p-2 cursor-pointer bg-neutral-900 shadow-indigo-900 hover:shadow-indigo-600 transition-shadow duration-300"
                 >
                     {/* Show different types of  button depending on form submission state */}
                     {submissionStatus === "success" && "Success!"}
