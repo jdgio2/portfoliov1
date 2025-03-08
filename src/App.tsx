@@ -11,12 +11,12 @@ export default function App() {
     useGSAP(() => {
         // make ultrablob follow mouse
         const xTo = gsap.quickTo("#ultrablob", "x", {
-            duration: 6,
-            ease: "power3",
+            ease: "elastic.out",
+            duration: 1,
         });
         const yTo = gsap.quickTo("#ultrablob", "y", {
-            duration: 6,
-            ease: "power3",
+            ease: "elastic.out",
+            duration: 1,
         });
         window.addEventListener("mousemove", (e) => {
             const offsetX =
@@ -30,23 +30,23 @@ export default function App() {
             xTo(e.clientX - offsetX / 2);
             yTo(e.clientY - offsetY / 2);
         });
-
-        gsap.fromTo(
-            "#ultrablob",
-            { backgroundColor: "oklch(0.885 0.062 18.334)" },
-            {
-                backgroundColor: "oklch(0.902 0.063 306.703)",
-                yoyo: true,
-                repeat: Infinity,
-                duration: 8,
-            }
-        );
+        // change color
+        // gsap will freak out if you try to interpolate between oklch values, but hex works
+        gsap.to("#ultrablob", {
+            rotation: 360,
+            backgroundColor: "#e9d4ff",
+            repeat: -1,
+            repeatDelay: 10,
+            duration: 3,
+            yoyo: true, // this will alternate back and forth on each repeat. Like a yoyo
+        });
     });
+
     return (
         <>
             <div
                 id="ultrablob"
-                className="w-48 h-48 rounded-full fixed bg-red-200 -z-10 pointer-events-none blur-3xl"
+                className="w-24 h-24 rounded-full fixed -z-10 bg-[#d5848e] pointer-events-none blur-3xl"
             ></div>
             <Header></Header>
             <Hero></Hero>
