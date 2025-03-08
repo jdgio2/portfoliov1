@@ -28,7 +28,7 @@ export default function Intro() {
             </h1>
             <div className="flex flex-col items-center p-4 mx-2 md:flex-row max-w-[1024px] gap-2">
                 <img
-                    src="/src/assets/heropic.jpg"
+                    src="/assets/heropic.jpg"
                     alt="JD Giovannetti"
                     className="max-h-60 rounded-full shadow-md shadow-indigo-200"
                 ></img>

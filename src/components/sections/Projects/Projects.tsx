@@ -1,9 +1,9 @@
 import MyDialog from "../../layout/MyDialog";
 import Carousel from "./Carousel";
 import { useState } from "react";
-import tester from "../../../assets/projects/testerimage.jpg";
-import tester2 from "../../../assets/projects/tester2.png";
-import tester3 from "../../../assets/projects/tester3.jpg";
+import tester from "/assets/projects/testerimage.jpg";
+import tester2 from "/assets/projects/tester2.png";
+import tester3 from "/assets/projects/tester3.jpg";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -141,17 +141,17 @@ export default function Projects() {
             <div className="flex flex-col md:flex-row items-center justify-items-center p-2 gap-12">
                 <ProjectButton
                     title="Entask"
-                    logoPath="src/assets/projects/logos/entask.svg"
+                    logoPath="/assets/projects/logos/entask.svg"
                     setProjOpen={setProj1Open}
                 />
                 <ProjectButton
                     title="Python to C++ Interpreter"
-                    logoPath="src/assets/projects/logos/pythontocpp.svg"
+                    logoPath="/assets/projects/logos/pythontocpp.svg"
                     setProjOpen={setProj2Open}
                 />
                 <ProjectButton
                     title="Sudoku App"
-                    logoPath="src/assets/projects/logos/sudokuapp.svg"
+                    logoPath="/assets/projects/logos/sudokuapp.svg"
                     setProjOpen={setProj3Open}
                 />
             </div>
