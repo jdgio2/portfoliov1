@@ -33,7 +33,6 @@ export default function App() {
         // change color
         // gsap will freak out if you try to interpolate between oklch values, but hex works
         gsap.to("#ultrablob", {
-            rotation: 360,
             backgroundColor: "#e9d4ff",
             repeat: -1,
             repeatDelay: 10,

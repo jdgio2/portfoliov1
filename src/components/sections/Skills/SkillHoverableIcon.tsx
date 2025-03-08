@@ -1,4 +1,4 @@
-import { validIcons, IconKey } from "../../../assets/validicons";
+import { validIcons, IconKey } from "../../../../public/assets/validicons";
 interface Props {
     icon: IconKey;
 }

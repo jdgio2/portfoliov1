@@ -2,7 +2,7 @@ import { useState } from "react";
 import MyDialog from "../../layout/MyDialog";
 import SkillHoverableIcon from "./SkillHoverableIcon";
 import { DialogTitle } from "@headlessui/react";
-import { validIcons, IconKey } from "../../../assets/validicons";
+import { validIcons, IconKey } from "../../../../public/assets/validicons";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
