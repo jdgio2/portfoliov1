@@ -33,7 +33,7 @@ export default function MyDialog({ children, open, setOpen }: Props) {
                             >
                                 X
                             </button>
-                            <div className="sm:flex sm:items-start overflow-y-auto max-h-[70vh]">
+                            <div className="overflow-y-auto max-h-[70vh]">
                                 {children}
                             </div>
                         </div>

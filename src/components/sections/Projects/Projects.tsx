@@ -49,6 +49,7 @@ function ProjectModalInfo({
         <>
             <Carousel images={images}></Carousel>
             <h1 className="font-bold text-3xl mb-2">{title}</h1>
+            {/* Skill tag items */}
             <div className="flex flex-wrap gap-1 mb-4">
                 {skills.map((item) => (
                     <span
