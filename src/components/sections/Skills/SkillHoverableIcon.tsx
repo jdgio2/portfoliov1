@@ -5,11 +5,7 @@ interface Props {
     setHovered: (arg0: boolean) => void;
 }
 
-export default function SkillHoverableIcon({
-    icon,
-    hovered,
-    setHovered,
-}: Props) {
+export default function SkillHoverableIcon({ icon, hovered }: Props) {
     const iconName: string = validIcons[icon].name;
     const iconUrl: string = validIcons[icon].imgUrl;
     return (
