@@ -26,13 +26,13 @@ export default function Intro() {
             <h1 className="text-center mx-2 inline font-bold text-4xl border-b-2 border-indigo-300 pb-4 mb-8">
                 WHO AM I?
             </h1>
-            <div className="flex flex-col items-center p-4 mx-2 md:flex-row max-w-[1024px] gap-2">
+            <div className="flex flex-col items-center p-4 mx-2 md:flex-row max-w-[1024px] gap-2 md:gap-16 rounded-xl bg-white/0 backdrop-blur-3xl shadow-lg ring-1 ring-black/5">
                 <img
                     src="/assets/heropic.jpg"
                     alt="JD Giovannetti"
-                    className="max-h-60 rounded-full shadow-md shadow-indigo-200"
+                    className="max-h-60 rounded-xl shadow-md shadow-indigo-200"
                 ></img>
-                <p className="m-5 text-center text-lg text-neutral-900">
+                <p className="m-5 text-center md:text-left text-lg text-neutral-900">
                     I'm a software developer with a B.S. in Computer Science and
                     a minor in Business Analytics from Biola University. It's my
                     jam to solve problems that provide real, tangible value for

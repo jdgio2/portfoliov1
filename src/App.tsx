@@ -11,11 +11,11 @@ export default function App() {
     useGSAP(() => {
         // make ultrablob follow mouse
         const xTo = gsap.quickTo("#ultrablob", "x", {
-            ease: "elastic.out",
+            ease: "expo.out",
             duration: 1,
         });
         const yTo = gsap.quickTo("#ultrablob", "y", {
-            ease: "elastic.out",
+            ease: "expo.out",
             duration: 1,
         });
         window.addEventListener("mousemove", (e) => {
@@ -45,7 +45,7 @@ export default function App() {
         <>
             <div
                 id="ultrablob"
-                className="w-24 h-24 rounded-full fixed -z-10 bg-[#d5848e] pointer-events-none blur-3xl"
+                className="w-64 h-64 rounded-full fixed -z-10 bg-[#f4bac1] blur-3xl"
             ></div>
             <Header></Header>
             <Hero></Hero>

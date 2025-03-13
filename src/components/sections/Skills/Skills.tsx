@@ -2,7 +2,7 @@ import { useState } from "react";
 import MyDialog from "../../layout/MyDialog";
 import SkillHoverableIcon from "./SkillHoverableIcon";
 import { DialogTitle } from "@headlessui/react";
-import { validIcons, IconKey } from "../../../../public/assets/validicons";
+import { validIcons, IconKey } from "./validicons";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,6 +10,7 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 export default function Skills() {
     const [open, setOpen] = useState(false);
+    const [hoveredId, setHoveredId] = useState(-1);
 
     useGSAP(() => {
         gsap.utils.toArray("#skills *").forEach((el) =>
@@ -38,7 +39,7 @@ export default function Skills() {
                         Technologies
                     </DialogTitle>
                     <div className="flex flex-row justify-center gap-10 flex-wrap">
-                        {Object.keys(validIcons).map((item) => {
+                        {Object.keys(validIcons).map((item, i) => {
                             if (
                                 validIcons[item as IconKey].iconType ===
                                 "full-stack"
@@ -47,6 +48,12 @@ export default function Skills() {
                                     <SkillHoverableIcon
                                         icon={item as IconKey}
                                         key={item}
+                                        hovered={hoveredId === i ? true : false}
+                                        setHovered={(val: boolean) =>
+                                            val
+                                                ? setHoveredId(i)
+                                                : setHoveredId(-1)
+                                        }
                                     ></SkillHoverableIcon>
                                 );
                             }
@@ -56,7 +63,7 @@ export default function Skills() {
                         Other Languages and Tools
                     </DialogTitle>
                     <div className="flex flex-row justify-center gap-10 flex-wrap">
-                        {Object.keys(validIcons).map((item) => {
+                        {Object.keys(validIcons).map((item, i) => {
                             if (
                                 validIcons[item as IconKey].iconType === "other"
                             ) {
@@ -64,6 +71,12 @@ export default function Skills() {
                                     <SkillHoverableIcon
                                         icon={item as IconKey}
                                         key={item}
+                                        hovered={hoveredId === i ? true : false}
+                                        setHovered={(val: boolean) =>
+                                            val
+                                                ? setHoveredId(i)
+                                                : setHoveredId(-1)
+                                        }
                                     ></SkillHoverableIcon>
                                 );
                             }
