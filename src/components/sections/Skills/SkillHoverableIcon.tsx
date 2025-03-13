@@ -14,8 +14,8 @@ export default function SkillHoverableIcon({
     const iconUrl: string = validIcons[icon].imgUrl;
     return (
         <div
-            onMouseEnter={setHovered(true)}
-            onMouseLeave={setHovered(false)}
+            // onMouseEnter={setHovered(true)}
+            // onMouseLeave={setHovered(false)}
             className="flex flex-col-reverse relative justify-items-center group"
         >
             <img
